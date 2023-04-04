@@ -19,8 +19,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ThemeCubit theme = BlocProvider.of<ThemeCubit>(context, listen: false);
+
     return MaterialApp(
       title: 'Flutter Demo',
+      theme: theme.isDark ? ThemeData.dark() : ThemeData.light(),
       showSemanticsDebugger: false,
       home: HomePage(),
     );
