@@ -7,7 +7,7 @@ void main() {
   runApp(MultiBlocProvider(
     providers: [
       BlocProvider(
-        create: (coontext) => ThemeCubit(),
+        create: (context) => ThemeCubit(),
       ),
     ],
     child: MyApp(),
@@ -15,7 +15,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({super.key}); 
 
   @override
   Widget build(BuildContext context) {
